@@ -2,6 +2,8 @@
 //DIFFICOLTA :
 //1 HO CAMBIATO blue-gray con blue_gray
 //Linea 265
+
+//BUG FIXED DARTH VEDER HAIRS FROM NONE TO N/A
 const starWarsCharacters = [
   {
     name: "Luke Skywalker",
@@ -37,7 +39,7 @@ const starWarsCharacters = [
     name: "Darth Vader",
     height: "202",
     mass: "136",
-    hair_color: "none",
+    hair_color: "n/a",
     skin_color: "white",
     eye_color: "yellow",
     birth_year: "41.9BBY",
@@ -133,6 +135,7 @@ console.log("\n");
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
 console.log("Exercise 3");
+
 let femaleCharacters=[
   {
       name:"Leia Organa",
@@ -155,7 +158,7 @@ let femaleCharacters=[
       eye_color:"brown",
   },
   {
-    name:"R5-D4",
+    name:"Beru Whitesun lars",
     hair_color:"brown",
     eyeColor:"blue,"
   }
@@ -309,10 +312,17 @@ console.log(
   "\n Hello i am the " ,(randomNumer+1)," passenger \n",
   "My name is ",starWarsCharacters[randomNumer].name,
   "I am a ",starWarsCharacters[randomNumer].gender,
-  " \n I have ",starWarsCharacters[randomNumer].hair_color, " hairs ",
-  "and my eyes are ",starWarsCharacters[randomNumer].eye_color,
+
+  "\n My eyes are ",starWarsCharacters[randomNumer].eye_color,
   "\n I was born in ",starWarsCharacters[randomNumer].birth_year,
   "\n my eight is",starWarsCharacters[randomNumer].height, " and my weight is ",starWarsCharacters[randomNumer].mass,
   "\n i love the",starWarsCharacters[randomNumer].skin_color," color"
 )
-console.log("\n");
+{
+  if(starWarsCharacters[randomNumer].hair_color=="n/a"){
+    console.log(" I don't have hairs");
+  }else
+  {
+    console.log(" I have ",starWarsCharacters[randomNumer].hair_color, " hairs ")
+  }
+}
