@@ -323,6 +323,6 @@ console.log(
     console.log(" I don't have hairs");
   }else
   {
-    console.log(" I have ",starWarsCharacters[randomNumer].hair_color, " hairs ")
+    console.log(" I have ",starWarsCharacters[randomNumer].hair_color, " hair ")
   }
 }
